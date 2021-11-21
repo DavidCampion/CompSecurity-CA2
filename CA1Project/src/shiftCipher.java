@@ -17,19 +17,19 @@ public class shiftCipher {
 
         int choice = 0;
         boolean isNumber;
-        while (choice != 4) {
+        while (choice != 3) {
             System.out.println("====== Cipher Decrypter 9000 ======");
             System.out.println();
-            System.out.println("1. Decrypt The first Cipher");
-            System.out.println("2. Decrypt The Second Cipher");
-            System.out.println("4. Exit");
+            System.out.println("1. Decrypt The first Cipher from file");
+            System.out.println("2. Decrypt The Second Cipher from file (Using)");
+            System.out.println("3. Exit");
             System.out.println();
             System.out.println("====================================");
             System.out.println("Please enter a number from the Main Menu");
 
             //validation UserInput
             do {
-                if (kb.hasNextInt()) {
+                try {
                     choice = kb.nextInt();
                     isNumber = true;
                     switch (choice) {
@@ -41,11 +41,11 @@ public class shiftCipher {
                             System.out.println("Cracking Second Cipher....");
                             cipherTwoPrint(cipherTwo);
                             break;
-                        case 4:
+                        case 3:
                             System.out.println("Goodbye");
                             break;
                     }
-                } else {
+                } catch (Exception e) {
                     System.out.println("Please enter a Number (1-3)");
                     isNumber = false;
                     kb.next();
