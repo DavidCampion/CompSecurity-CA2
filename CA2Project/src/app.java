@@ -3,7 +3,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class shiftCipher {
+public class app {
 
     public static void main(String[] args) throws IOException {
 
@@ -12,7 +12,7 @@ public class shiftCipher {
         int choice = 0;
         boolean isNumber;
         while (choice != 3) {
-            System.out.println("====== Cipher Decrypter & Encrypter 9001 ======");
+            System.out.println("====== Decrypter & Encrypter 9001 ======");
             System.out.println();
             System.out.println("1. Encrypt a File");
             System.out.println("2. Decrypt a File");
